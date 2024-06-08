@@ -8,7 +8,7 @@ import Combine
 //Timer that emits current time in every second
 let timer = Timer.publish(every: 1, on: .current, in: .default).autoconnect()
 
-//subscriber prints current time by every second
+//subscriber prints current time received in every second
 let timerSubscriber: AnyCancellable = timer.sink { time in
     print(time)
 }

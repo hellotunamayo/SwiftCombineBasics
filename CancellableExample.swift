@@ -5,7 +5,7 @@ import Combine
   Cancellable & AnyCancellable is type can be cancelled.
 */
 
-//Timer that emits current time every second
+//Timer that emits current time in every second
 let timer = Timer.publish(every: 1, on: .current, in: .default).autoconnect()
 
 //subscriber prints current time by every second

@@ -4,7 +4,7 @@ import Combine
 /*
     PassthroughSubject
     1. Doesn't have initial value
-    2. Subscriber can receive values from the publisher starting from the point they subscribe
+    2. Subscribers can receive values from the publisher immediately upon subscribing
 */
 
 //First generic type is type be published.

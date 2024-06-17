@@ -13,19 +13,19 @@ import Combine
 let publisher = PassthroughSubject<Int, Never>()
 
 //First subscriber
-let subscriber1: AnyCancellable = publisher.sink { integer in
+let subscription1: AnyCancellable = publisher.sink { integer in
     print("integer1 is: \(integer)")
 }
 
-publisher.send(123) //First subscriber prints 123
+publisher.send(123) //First subscription prints 123
 
 //Second subscriber
-let subscriber2 = publisher.sink { integer in
+let subscription2 = publisher.sink { integer in
     print("integer2 is: \(integer)")
 }
 
-publisher.send(456) //both of subscriber prints 456
-publisher.send(789) //both of subscriber prints 789
+publisher.send(456) //both of subscription prints 456
+publisher.send(789) //both of subscription prints 789
 
 /*
  The result is:
